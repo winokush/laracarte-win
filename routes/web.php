@@ -11,6 +11,8 @@
 |
 */
 
+
+
 Route::get('/', [
     'as' => 'root_path',
     'uses' => 'PagesController@home'
@@ -26,3 +28,11 @@ Route::get('/contact', [
     'uses' => 'ContactsController@create'
 ]);
 
+Route::post('/contact', [
+    'as' => 'contact_path',
+    'uses' => 'ContactsController@store'
+]);
+
+Route::get('/test-email', function () {
+    return new \laracarte\Mail\ContactMessageCreated('wino', 'f2wino@gmail.com', 'Je vous remercie pour votre tuto.');
+});

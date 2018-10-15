@@ -169,6 +169,7 @@ return [
          */
 
         Barryvdh\Debugbar\ServiceProvider::class,
+        MercurySeries\Flashy\FlashyServiceProvider::class,
         /*
          * Application Service Providers...
          */
